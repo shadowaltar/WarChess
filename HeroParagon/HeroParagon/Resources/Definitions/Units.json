@@ -1,0 +1,49 @@
+﻿[
+	{
+		"id": 1,
+		"name": "Pikeman",
+		"icons": {
+			"default": "Units/pikeman.png"
+		},
+		"sprites": {
+			"blueprint": "Units/pikeman_blueprint.png",
+			"idle": "Units/Castle/pikeman_idle.png",
+			"walk": "Units/Castle/pikeman_walk.png",
+			"attack": "Units/Castle/pikeman_attack.png",
+			"die": "Units/Castle/pikeman_die.png",
+			"battle_idle": "Units/Castle/pikeman_idle.png",
+			"battle_walk": "Units/Castle/pikeman_walk.png",
+			"battle_attack": "Units/Castle/pikeman_attack.png",
+			"battle_cast": "Units/Castle/pikeman_cast.png",
+			"battle_defend": "Units/Castle/pikeman_defend.png",
+			"battle_hurt": "Units/Castle/pikeman_hurt.png",
+			"battle_die": "Units/Castle/pikeman_die.png"
+		},
+		"costs": {
+			{
+				"currency_id": 1,
+				"amount": 60
+			}
+		},
+		"modifiers": [
+			[
+				{
+					"stat": "health",
+					"value": 100
+				},
+				{
+					"stat": "attack",
+					"value": 15
+				},
+				{
+					"stat": "defense",
+					"value": 5
+				},
+				{
+					"stat": "speed",
+					"value": 2
+				}
+			]
+		]
+	}
+]

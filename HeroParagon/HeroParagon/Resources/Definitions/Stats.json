@@ -1,0 +1,95 @@
+﻿[
+	{
+		"id": 1,
+		"name": "lvl",
+		"display-name": "Level",
+		"value-type": "integer",
+		"icons": {
+			"default": "General/level.png"
+		}
+	},
+	{
+		"id": 2,
+		"name": "att",
+		"display-name": "Attack",
+		"value-type": "integer",
+		"icons": {
+			"default": "Stats/attack.png"
+		}
+	},
+	{
+		"id": 3,
+		"name": "def",
+		"display-name": "Defense",
+		"value-type": "integer",
+		"icons": {
+			"default": "Stats/defense.png"
+		}
+	},
+	{
+		"id": 4,
+		"name": "dmg-",
+		"display-name": "Min Damage",
+		"value-type": "integer",
+		"icons": {
+			"default": "Stats/min_damage.png"
+		}
+	},
+	{
+		"id": 5,
+		"name": "dmg+",
+		"display-name": "Max Damage",
+		"value-type": "integer",
+		"icons": {
+			"default": "Stats/max_damage.png"
+		}
+	},
+	{
+		"id": 6,
+		"name": "hp",
+		"display-name": "HP",
+		"value-type": "integer",
+		"icons": {
+			"default": "Stats/hp.png"
+		}
+	},
+	{
+		"id": 7,
+		"name": "spd",
+		"display-name": "Speed",
+		"value-type": "float",
+		"icons": {
+			"default": "Stats/speed.png"
+		}
+	},
+	{
+		"id": 8,
+		"name": "grw",
+		"display-name": "Growth",
+		"value-type": "integer",
+		"icons": {
+			"default": "Stats/growth.png"
+		}
+	},
+	{
+		"id": 9,
+		"name": "cost",
+		"display-name": "Cost",
+		"value-type": "integer"
+		}
+	},
+	{
+		"id": 10,
+		"name": "rng",
+		"display-name": "Range",
+		"value-type": "bool",
+		"default": "false"
+	},
+	{
+		"id": 11,
+		"name": "ammo",
+		"display-name": "Ammo",
+		"value-type": "integer",
+		"default": "0"
+	}
+]

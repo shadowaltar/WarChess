@@ -1,0 +1,11 @@
+﻿[
+	{
+		"name": "Gold",
+		"icons": {
+			"default": "Currencies/gold.png"
+		},
+		"sprites": {
+			"idle": "Currencies/gold_idle.png"
+		}
+	}
+]
