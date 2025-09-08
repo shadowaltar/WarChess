@@ -1,49 +1,339 @@
 ﻿[
 	{
 		"id": 1,
-		"name": "Pikeman",
-		"icons": {
-			"default": "Units/pikeman.png"
-		},
-		"sprites": {
-			"blueprint": "Units/pikeman_blueprint.png",
-			"idle": "Units/Castle/pikeman_idle.png",
-			"walk": "Units/Castle/pikeman_walk.png",
-			"attack": "Units/Castle/pikeman_attack.png",
-			"die": "Units/Castle/pikeman_die.png",
-			"battle_idle": "Units/Castle/pikeman_idle.png",
-			"battle_walk": "Units/Castle/pikeman_walk.png",
-			"battle_attack": "Units/Castle/pikeman_attack.png",
-			"battle_cast": "Units/Castle/pikeman_cast.png",
-			"battle_defend": "Units/Castle/pikeman_defend.png",
-			"battle_hurt": "Units/Castle/pikeman_hurt.png",
-			"battle_die": "Units/Castle/pikeman_die.png"
-		},
-		"costs": {
-			{
-				"currency_id": 1,
-				"amount": 60
-			}
-		},
+		"name": "pikeman",
+		"display_name": "Pikeman",
+		"icons": {},
+		"sprites": {},
+		"inherits": [
+			"unit_base"
+		],
 		"modifiers": [
-			[
-				{
-					"stat": "health",
-					"value": 100
-				},
-				{
-					"stat": "attack",
-					"value": 15
-				},
-				{
-					"stat": "defense",
-					"value": 5
-				},
-				{
-					"stat": "speed",
-					"value": 2
+			{
+				"stat": "hp",
+				"value": 10
+			},
+			{
+				"stat": "attack",
+				"value": 4
+			},
+			{
+				"stat": "defense",
+				"value": 5
+			},
+			{
+				"stat": "min_dmg",
+				"value": 1
+			},
+			{
+				"stat": "max_dmg",
+				"value": 3
+			},
+			{
+				"stat": "speed",
+				"value": 2
+			},
+			{
+				"stat": "ai_value",
+				"value": 80
+			},
+			{
+				"stat": "fight_value",
+				"value": 100
+			},
+			{
+				"stat": "cost",
+				"value": {
+					"currency": "gold",
+					"value": 60
 				}
-			]
+			},
+			{
+				"stat": "level",
+				"value": 1
+			}
+		],
+		"tags": [
+			"castle",
+			"upgradeable",
+			"ground",
+			"good_alignment"
+		],
+		"abilities": [
+			{
+				"name": "melee_attack"
+			},
+			{
+				"name": "defend"
+			},
+			{
+				"name": "move"
+			},
+			{
+				"name": "jousting_immunity"
+			}
+		]
+	},
+	{
+		"id": 4,
+		"name": "marksman",
+		"display_name": "Marksman",
+		"icons": {},
+		"sprites": {},
+		"inherits": [
+			"unit_base"
+		],
+		"modifiers": [
+			{
+				"stat": "hp",
+				"value": 10
+			},
+			{
+				"stat": "attack",
+				"value": 6
+			},
+			{
+				"stat": "defense",
+				"value": 3
+			},
+			{
+				"stat": "min_dmg",
+				"value": 2
+			},
+			{
+				"stat": "max_dmg",
+				"value": 3
+			},
+			{
+				"stat": "speed",
+				"value": 6
+			},
+			{
+				"stat": "ammo",
+				"value": 24
+			},
+			{
+				"stat": "multi_attack_count",
+				"value": 2
+			},
+			{
+				"stat": "ai_value",
+				"value": 184
+			},
+			{
+				"stat": "fight_value",
+				"value": 115
+			},
+			{
+				"stat": "cost",
+				"value": {
+					"currency": "gold",
+					"value": 150
+				}
+			},
+			{
+				"stat": "level",
+				"value": 2
+			}
+		],
+		"tags": [
+			"castle",
+			"ground",
+			"archer",
+			"good_alignment"
+		],
+		"abilities": [
+			{
+				"name": "penalized_melee_attack"
+			},
+			{
+				"name": "multi_ranged_attack"
+			},
+			{
+				"name": "defend"
+			},
+			{
+				"name": "move"
+			}
+		]
+	},
+	{
+		"id": 11,
+		"name": "cavalier",
+		"display_name": "Cavalier",
+		"icons": {},
+		"sprites": {},
+		"inherits": [
+			"unit_base"
+		],
+		"modifiers": [
+			{
+				"stat": "hp",
+				"value": 100
+			},
+			{
+				"stat": "attack",
+				"value": 15
+			},
+			{
+				"stat": "defense",
+				"value": 15
+			},
+			{
+				"stat": "min_dmg",
+				"value": 15
+			},
+			{
+				"stat": "max_dmg",
+				"value": 25
+			},
+			{
+				"stat": "speed",
+				"value": 7
+			},
+			{
+				"stat": "attack_modifier",
+				"value": 1,
+				"comment": "used by jousting ability"
+			},
+			{
+				"stat": "move_distance",
+				"value": 0,
+				"comment": "used by jousting ability"
+			},
+			{
+				"stat": "ai_value",
+				"value": 184
+			},
+			{
+				"stat": "fight_value",
+				"value": 115
+			},
+			{
+				"stat": "cost",
+				"value": {
+					"currency": "gold",
+					"value": 150
+				}
+			},
+			{
+				"stat": "level",
+				"value": 6
+			}
+		],
+		"tags": [
+			"castle",
+			"ground",
+			"archer",
+			"good_alignment"
+		],
+		"abilities": [
+			{
+				"name": "penalized_melee_attack"
+			},
+			{
+				"name": "multi_ranged_attack"
+			},
+			{
+				"name": "defend"
+			},
+			{
+				"name": "move"
+			}
+		]
+	},
+	{
+		"id": 14,
+		"name": "archangel",
+		"display_name": "Archangel",
+		"icons": {},
+		"sprites": {},
+		"inherits": [
+			"unit_base"
+		],
+		"modifiers": [
+			{
+				"stat": "hp",
+				"value": 250
+			},
+			{
+				"stat": "attack",
+				"value": 30
+			},
+			{
+				"stat": "defense",
+				"value": 30
+			},
+			{
+				"stat": "min_dmg",
+				"value": 50
+			},
+			{
+				"stat": "max_dmg",
+				"value": 50
+			},
+			{
+				"stat": "speed",
+				"value": 18
+			},
+			{
+				"stat": "resurrection_count",
+				"value": 1,
+				"comment": "used by resurrection ability"
+			},
+			{
+				"stat": "ai_value",
+				"value": 8776
+			},
+			{
+				"stat": "fight_value",
+				"value": 6033
+			},
+			{
+				"stat": "cost",
+				"value": [
+					{
+						"currency": "gold",
+						"value": 5000
+					},
+					{
+						"currency": "gem",
+						"value": 3
+					}
+				]
+			},
+			{
+				"stat": "level",
+				"value": 7
+			}
+		],
+		"tags": [
+			"castle",
+			"flying",
+			"good_alignment",
+			"caster"
+		],
+		"abilities": [
+			{
+				"name": "melee_attack"
+			},
+			{
+				"name": "defend"
+			},
+			{
+				"name": "move"
+			},
+			{
+				"name": "change_ally_morale",
+				"arg": "+1"
+			},
+			{
+				"name": "hate_devil"
+			},
+			{
+				"name": "cast_angel_resurrection",
+				"arg": "+100"
+			}
 		]
 	}
 ]

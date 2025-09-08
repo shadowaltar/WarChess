@@ -1,0 +1,35 @@
+[
+    {
+        "name": "jousting",
+        "active": false,
+        "invoked_by": "move",
+        "on_invoked": [
+            {
+                "name": "change_stat",
+                "stat": "current_attack_modifier",
+                "of": "self",
+                "by": "+0.05*current_move_distance"
+            }
+        ],
+        "on_finished": [
+            {
+                "name": "change_stat",
+                "stat": "current_attack_modifier",
+                "of": "self",
+                "set_to": 1
+            }
+        ]
+    },
+    {
+        "name": "increase_morale",
+        "active": false,
+        "on_invoked": [
+            {
+                "name": "change_stat",
+                "stat": "morale",
+                "of": "self",
+                "by": 1
+            }
+        ]
+    }
+]

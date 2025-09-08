@@ -1,0 +1,50 @@
+[
+    {
+        "name": "melee_attack"
+    },
+    {
+        "name": "penalized_melee_attack"
+    },
+    {
+        "name": "ranged_attack",
+        "condition": [
+            {
+                "name": "ammo_check"
+            }
+        ]
+    },
+    {
+        "name": "multi_melee_attack"
+    },
+    {
+        "name": "multi_ranged_attack",
+        "condition": [
+            {
+                "name": "ammo_check"
+            },
+            {
+                "name": "max_multi_attack_check"
+            }
+        ],
+        "on_invoked": [
+            {
+                "name": "multi_ranged_attack"
+            },
+            {
+                "name": "change_stat",
+                "stat": "current_multi_attack_count",
+                "of": "self",
+                "by": -1
+            }
+        ],
+        "on_finished": [
+            {
+                "name": "change_stat",
+                "stat": "current_multi_attack_count",
+                "of": "self",
+                "set_to": "multi_attack_count",
+                "to_of": "self"
+            }
+        ]
+    }
+]

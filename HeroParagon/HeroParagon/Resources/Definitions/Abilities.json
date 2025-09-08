@@ -1,0 +1,17 @@
+[
+    {
+        "name": "change_stat"
+    },
+    {
+        "name": "defend"
+    },
+    {
+        "name": "move"
+    },
+    {
+        "name": "fly"
+    },
+    {
+        "name": "recruit"
+    }
+]

@@ -1,0 +1,15 @@
+[
+    {
+        "name": "unit_base",
+        "stats": [
+            {
+                "stat": "morale",
+                "value": 0
+            },
+            {
+                "stat": "luck",
+                "value": 0
+            }
+        ]
+    }
+]

@@ -1,0 +1,11 @@
+[
+    {
+        "name": "jousting_immunity",
+        "is": "modifier",
+        "active": false,
+        "affected_stat": "hp",
+        "target_unit": "cavalier|champion",
+        "target_ability": "jousting",
+        "value": "*0"
+    }
+]

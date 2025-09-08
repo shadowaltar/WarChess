@@ -1,0 +1,30 @@
+[
+    {
+        "name": "ammo_check",
+        "formula": [
+            {
+                "operand1": {
+                    "stat": "ammo",
+                    "of": "self"
+                },
+                "operator": ">",
+                "operand2": 0
+            }
+        ],
+        "invert_result": false
+    },
+    {
+        "name": "max_multi_attack_check",
+        "formula": [
+            {
+                "operand1": {
+                    "stat": "current_multi_attack_count",
+                    "of": "self"
+                },
+                "operator": "equals_to",
+                "operand2": 0
+            }
+        ],
+        "invert_result": true
+    }
+]
