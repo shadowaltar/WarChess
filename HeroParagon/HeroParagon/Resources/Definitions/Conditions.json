@@ -26,5 +26,18 @@
             }
         ],
         "invert_result": true
+    },
+    {
+        "name": "select_affected_unit",
+        "formula": [
+            {
+                "operand1": {
+                    "stat": "label",
+                    "of": "selected_target"
+                },
+                "operator": "contains",
+                "operand2": "$1"
+            }
+        ]
     }
 ]

@@ -8,48 +8,48 @@
 		"inherits": [
 			"unit_base"
 		],
-		"modifiers": [
+		"values": [
 			{
-				"stat": "hp",
+				"name": "hp",
 				"value": 10
 			},
 			{
-				"stat": "attack",
+				"name": "attack",
 				"value": 4
 			},
 			{
-				"stat": "defense",
+				"name": "defense",
 				"value": 5
 			},
 			{
-				"stat": "min_dmg",
+				"name": "min_dmg",
 				"value": 1
 			},
 			{
-				"stat": "max_dmg",
+				"name": "max_dmg",
 				"value": 3
 			},
 			{
-				"stat": "speed",
+				"name": "speed",
 				"value": 2
 			},
 			{
-				"stat": "ai_value",
+				"name": "ai_value",
 				"value": 80
 			},
 			{
-				"stat": "fight_value",
+				"name": "fight_value",
 				"value": 100
 			},
 			{
-				"stat": "cost",
+				"name": "cost",
 				"value": {
 					"currency": "gold",
 					"value": 60
 				}
 			},
 			{
-				"stat": "level",
+				"name": "level",
 				"value": 1
 			}
 		],
@@ -83,56 +83,56 @@
 		"inherits": [
 			"unit_base"
 		],
-		"modifiers": [
+		"values": [
 			{
-				"stat": "hp",
+				"name": "hp",
 				"value": 10
 			},
 			{
-				"stat": "attack",
+				"name": "attack",
 				"value": 6
 			},
 			{
-				"stat": "defense",
+				"name": "defense",
 				"value": 3
 			},
 			{
-				"stat": "min_dmg",
+				"name": "min_dmg",
 				"value": 2
 			},
 			{
-				"stat": "max_dmg",
+				"name": "max_dmg",
 				"value": 3
 			},
 			{
-				"stat": "speed",
+				"name": "speed",
 				"value": 6
 			},
 			{
-				"stat": "ammo",
+				"name": "ammo",
 				"value": 24
 			},
 			{
-				"stat": "multi_attack_count",
+				"name": "multi_attack_count",
 				"value": 2
 			},
 			{
-				"stat": "ai_value",
+				"name": "ai_value",
 				"value": 184
 			},
 			{
-				"stat": "fight_value",
+				"name": "fight_value",
 				"value": 115
 			},
 			{
-				"stat": "cost",
+				"name": "cost",
 				"value": {
 					"currency": "gold",
 					"value": 150
 				}
 			},
 			{
-				"stat": "level",
+				"name": "level",
 				"value": 2
 			}
 		],
@@ -166,58 +166,58 @@
 		"inherits": [
 			"unit_base"
 		],
-		"modifiers": [
+		"values": [
 			{
-				"stat": "hp",
+				"name": "hp",
 				"value": 100
 			},
 			{
-				"stat": "attack",
+				"name": "attack",
 				"value": 15
 			},
 			{
-				"stat": "defense",
+				"name": "defense",
 				"value": 15
 			},
 			{
-				"stat": "min_dmg",
+				"name": "min_dmg",
 				"value": 15
 			},
 			{
-				"stat": "max_dmg",
+				"name": "max_dmg",
 				"value": 25
 			},
 			{
-				"stat": "speed",
+				"name": "speed",
 				"value": 7
 			},
 			{
-				"stat": "attack_modifier",
+				"name": "attack_modifier",
 				"value": 1,
 				"comment": "used by jousting ability"
 			},
 			{
-				"stat": "move_distance",
+				"name": "move_distance",
 				"value": 0,
 				"comment": "used by jousting ability"
 			},
 			{
-				"stat": "ai_value",
+				"name": "ai_value",
 				"value": 184
 			},
 			{
-				"stat": "fight_value",
+				"name": "fight_value",
 				"value": 115
 			},
 			{
-				"stat": "cost",
+				"name": "cost",
 				"value": {
 					"currency": "gold",
 					"value": 150
 				}
 			},
 			{
-				"stat": "level",
+				"name": "level",
 				"value": 6
 			}
 		],
@@ -251,46 +251,46 @@
 		"inherits": [
 			"unit_base"
 		],
-		"modifiers": [
+		"values": [
 			{
-				"stat": "hp",
+				"name": "hp",
 				"value": 250
 			},
 			{
-				"stat": "attack",
+				"name": "attack",
 				"value": 30
 			},
 			{
-				"stat": "defense",
+				"name": "defense",
 				"value": 30
 			},
 			{
-				"stat": "min_dmg",
+				"name": "min_dmg",
 				"value": 50
 			},
 			{
-				"stat": "max_dmg",
+				"name": "max_dmg",
 				"value": 50
 			},
 			{
-				"stat": "speed",
+				"name": "speed",
 				"value": 18
 			},
 			{
-				"stat": "resurrection_count",
+				"name": "resurrection_count",
 				"value": 1,
 				"comment": "used by resurrection ability"
 			},
 			{
-				"stat": "ai_value",
+				"name": "ai_value",
 				"value": 8776
 			},
 			{
-				"stat": "fight_value",
+				"name": "fight_value",
 				"value": 6033
 			},
 			{
-				"stat": "cost",
+				"name": "cost",
 				"value": [
 					{
 						"currency": "gold",
@@ -303,7 +303,7 @@
 				]
 			},
 			{
-				"stat": "level",
+				"name": "level",
 				"value": 7
 			}
 		],
@@ -324,15 +324,16 @@
 				"name": "move"
 			},
 			{
-				"name": "change_ally_morale",
-				"arg": "+1"
+				"name": "change_team_morale",
+				"arg": "+1",
+				"to": "self_team"
 			},
 			{
-				"name": "hate_devil"
+				"name": "hate",
+				"arg": "devil|demon"
 			},
 			{
-				"name": "cast_angel_resurrection",
-				"arg": "+100"
+				"name": "cast_angel_resurrection"
 			}
 		]
 	}

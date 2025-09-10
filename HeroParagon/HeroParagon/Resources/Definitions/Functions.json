@@ -1,0 +1,74 @@
+[
+    {
+        "name": "base_damage",
+        "apply_to": "unit",
+        "args": [
+            {
+                "name": "attack_type",
+                "type": "unit",
+                "comment": "The target unit which is being attacked"
+            },
+            {
+                "name": "base",
+                "formula": "random($min,$max,'both_inclusive','integer')",
+                "args": [
+                    {
+                        "name": "min",
+                        "value": "self.values.min_dmg"
+                    },
+                    {
+                        "name": "max",
+                        "value": "self.values.max_dmg"
+                    }
+                ]
+            },
+            {
+                "name": "i1",
+                "formula": "0.05*max(0,$attack-$defense)",
+                "args": [
+                    {
+                        "name": "attack",
+                        "value": "self.values.attack"
+                    },
+                    {
+                        "name": "defense",
+                        "value": "target.values.defense"
+                    }
+                ]
+            },
+            {
+                "name": "i2",
+                "formula": "if($attack_type='ranged'?$i2_archery;='melee'?$i2_offense;0)",
+                "args": [
+                    {
+                        "name": "i2_archery",
+                        "formula": "if($archery_level=0?0;=1?0.1;=2?0.25;=3?0.5;0),0)",
+                        "args": [
+                            {
+                                "name": "archery_level",
+                                "value": "owner.abilities.archery.values.level",
+                                "comment": "Archery skill level from the hero which owns this unit"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "i2_offense",
+                        "formula": "if($offense_level=0?0;=1?0.1;=2?0.2;=3?0.3;0)",
+                        "args": [
+                            {
+                                "name": "offense_level",
+                                "value": "owner.abilities.offense.values.level",
+                                "comment": "Offense skill level from the hero which owns this unit"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "i3",
+                "formula": "if($self_tag='undead'?0.5;0)",
+            }
+        ],
+        "formula": "$base*(1+$i1+i2+i3+i4+i5)*(1-$r1)*(1-$r2-$r3)*(1-$r4)*(1-$r5)*(1-$r6)*(1-$r7)*(1-$r8)"
+    }
+]

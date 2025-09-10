@@ -8,27 +8,71 @@
                 "name": "change_stat",
                 "stat": "current_attack_modifier",
                 "of": "self",
-                "by": "+0.05*current_move_distance"
+                "to": "+0.05*current_move_distance"
             }
         ],
         "on_finished": [
             {
-                "name": "change_stat",
-                "stat": "current_attack_modifier",
-                "of": "self",
-                "set_to": 1
+                "name": "reset_any_modifier"
             }
         ]
     },
     {
-        "name": "increase_morale",
+        "name": "change_team_morale",
         "active": false,
+        "invoked_by": "start_of_battle",
         "on_invoked": [
             {
                 "name": "change_stat",
                 "stat": "morale",
+                "of": "team",
+                "to": "$1"
+            }
+        ]
+    },
+    {
+        "name": "hate",
+        "active": false,
+        "invoked_by": "before_melee_attack",
+        "condition": [
+            {
+                "name": "select_affected_unit",
+                "args": [
+                    "devil",
+                    "demon"
+                ]
+            }
+        ],
+        "on_invoked": [
+            {
+                "name": "change_stat",
+                "stat": "current_hate_modifier",
                 "of": "self",
-                "by": 1
+                "to": 1.5
+            }
+        ],
+        "on_finished": [
+            {
+                "name": "reset_any_modifier"
+            }
+        ]
+    },
+    {
+        "name": "cast_angel_resurrection",
+        "active": false,
+        "invoked_by": "end_of_turn",
+        "condition": [
+            {
+                "name": "has_ability",
+                "ability": "angel_resurrection"
+            }
+        ],
+        "on_invoked": [
+            {
+                "name": "cast_ability",
+                "ability": "angel_resurrection",
+                "of": "self_team",
+                "targeting": "dead_allies"
             }
         ]
     }
