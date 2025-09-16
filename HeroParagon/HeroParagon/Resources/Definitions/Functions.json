@@ -24,16 +24,22 @@
             },
             {
                 "name": "i1",
-                "formula": "0.05*max(0,$attack-$defense)",
+                "formula": "min(max(if($add>0?0.05*$add;0.025*$add),3),-0.7)",
                 "args": [
                     {
-                        "name": "attack",
-                        "value": "self.values.attack"
+                        "name": "add",
+                        "formula": "$attack-$defense",
+                        "args": [
+                            {
+                                "name": "attack",
+                                "value": "self.values.attack"
+                            },
+                            {
+                                "name": "defense",
+                                "value": "target.values.defense"
+                            }
+                        ]
                     },
-                    {
-                        "name": "defense",
-                        "value": "target.values.defense"
-                    }
                 ]
             },
             {
@@ -66,7 +72,7 @@
             },
             {
                 "name": "i3",
-                "formula": "if($self_tag='undead'?0.5;0)",
+                "formula": "o.05*self."
             }
         ],
         "formula": "$base*(1+$i1+i2+i3+i4+i5)*(1-$r1)*(1-$r2-$r3)*(1-$r4)*(1-$r5)*(1-$r6)*(1-$r7)*(1-$r8)"

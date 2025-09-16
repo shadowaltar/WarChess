@@ -1,0 +1,35 @@
+[
+    {
+        "name": "initiate_creatures_knight",
+        "active": false,
+        "invoked_by": "hero_recruited_first_time",
+        "actions": [
+            {
+                "action": "create_creature_in_hero",
+                "args": [
+                    {
+                        "name": "pikeman",
+                        "value": "random(10,20)"
+                    },
+                    {
+                        "name": "archer",
+                        "value": "random(4-7)"
+                    },
+                    {
+                        "name": "griffin",
+                        "value": "random(4-5)"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "archery_specialty"
+    },
+    {
+        "name": "leadership"
+    },
+    {
+        "name": "archery"
+    }
+]

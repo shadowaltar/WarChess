@@ -1,0 +1,99 @@
+[
+    {
+        "id": 100001,
+        "name": "knight_1",
+        "display_name": "Orrin",
+        "description": "Orrin trained with one of Erathia's best siege tacticians during his early military service. Any archers under his command learn quickly to shoot at targets behind obstacles.",
+        "icons": {},
+        "sprites": {},
+        "inherits": [
+            "knight_base"
+        ],
+        "values": [
+            {
+                "name": "level",
+                "value": 1
+            },
+            {
+                "name": "movement",
+                "value": 1560
+            }
+        ],
+        "tags": [
+            "male"
+        ],
+        "abilities": [
+            {
+                "name": "archery_specialty"
+            },
+            {
+                "name": "initiate_creatures_knight"
+            },
+            {
+                "name": "leadership",
+                "values": [
+                    {
+                        "name": "level",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "name": "archery",
+                "values": [
+                    {
+                        "name": "level",
+                        "value": 1
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 1500010,
+        "name": "death_knight_10",
+        "display_name": "Lord Haart Lich the Death Knight",
+        "description": "Resurrected by his cult of necromantic followers, Lord Haart has emerged a more powerful foe than before.",
+        "icons": {},
+        "sprites": {},
+        "inherits": [
+            "death_knight_base"
+        ],
+        "values": [
+            {
+                "name": "level",
+                "value": 1
+            },
+            {
+                "name": "movement",
+                "value": 1500
+            }
+        ],
+        "tags": [
+            "male"
+        ],
+        "abilities": [
+            {
+                "name": "black_knight_specialty"
+            },
+            {
+                "name": "initiate_items_lich"
+            },
+            {
+                "name": "initiate_spells_lich"
+            },
+            {
+                "name": "initiate_creatures_lich"
+            },
+            {
+                "name": "necromancy",
+                "values": [
+                    {
+                        "name": "level",
+                        "value": 2
+                    }
+                ]
+            }
+        ]
+    }
+]
