@@ -279,7 +279,7 @@
 			{
 				"name": "resurrection_count",
 				"value": 1,
-				"comment": "used by resurrection ability"
+				"description": "used by resurrection ability"
 			},
 			{
 				"name": "ai_value",
@@ -325,12 +325,17 @@
 			},
 			{
 				"name": "change_team_morale",
-				"arg": "+1",
-				"to": "self_team"
+				"args": [
+					"self_team",
+					"+1"
+				]
 			},
 			{
 				"name": "hate",
-				"arg": "devil|demon"
+				"args": [
+					"devil",
+					"demon"
+				]
 			},
 			{
 				"name": "cast_angel_resurrection"

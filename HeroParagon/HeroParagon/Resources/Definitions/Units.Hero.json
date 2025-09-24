@@ -17,6 +17,14 @@
             {
                 "name": "movement",
                 "value": 1560
+            },
+            {
+                "name": "leadership_level",
+                "value": 1
+            },
+            {
+                "name": "archery_level",
+                "value": 1
             }
         ],
         "tags": [
@@ -31,20 +39,14 @@
             },
             {
                 "name": "leadership",
-                "values": [
-                    {
-                        "name": "level",
-                        "value": 1
-                    }
+                "args": [
+                    "leadership_level"
                 ]
             },
             {
                 "name": "archery",
-                "values": [
-                    {
-                        "name": "level",
-                        "value": 1
-                    }
+                "args": [
+                    "archery_level"
                 ]
             }
         ]
@@ -67,6 +69,10 @@
             {
                 "name": "movement",
                 "value": 1500
+            },
+            {
+                "name": "necromancy_level",
+                "value": 2
             }
         ],
         "tags": [
@@ -87,11 +93,8 @@
             },
             {
                 "name": "necromancy",
-                "values": [
-                    {
-                        "name": "level",
-                        "value": 2
-                    }
+                "args": [
+                    "self.values.initial_necromancy_level"
                 ]
             }
         ]

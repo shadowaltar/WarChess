@@ -1,43 +1,14 @@
 [
     {
         "name": "ammo_check",
-        "formula": [
-            {
-                "operand1": {
-                    "stat": "ammo",
-                    "of": "self"
-                },
-                "operator": ">",
-                "operand2": 0
-            }
-        ],
-        "invert_result": false
+        "formula": "self.ammo>0"
     },
     {
         "name": "max_multi_attack_check",
-        "formula": [
-            {
-                "operand1": {
-                    "stat": "current_multi_attack_count",
-                    "of": "self"
-                },
-                "operator": "equals_to",
-                "operand2": 0
-            }
-        ],
-        "invert_result": true
+        "formula": "self.current_multi_attack_count>0"
     },
     {
         "name": "select_affected_unit",
-        "formula": [
-            {
-                "operand1": {
-                    "stat": "label",
-                    "of": "selected_target"
-                },
-                "operator": "contains",
-                "operand2": "$1"
-            }
-        ]
+        "formula": "contains(selected_target.label,$1)"
     }
 ]

@@ -1,0 +1,145 @@
+[
+    {
+        "name": "unit_base",
+        "values": [
+            {
+                "name": "morale",
+                "value": 0
+            },
+            {
+                "name": "luck",
+                "value": 0
+            }
+        ]
+    },
+    {
+        "name": "hero_base",
+        "values": [
+            {
+                "name": "cost",
+                "value": {
+                    "currency": "gold",
+                    "value": 2500
+                }
+            }
+        ],
+        "tags": [
+            "hero",
+            "non_unit"
+        ]
+    },
+    {
+        "name": "castle_hero_base",
+        "inherits": [
+            "hero_base"
+        ],
+        "values": [
+            {
+                "name": "race",
+                "value": "human"
+            }
+        ],
+        "tags": [
+            "castle",
+            "good_alignment"
+        ],
+        "abilities": [
+            {
+                "name": "sacrifice_artifact_into_exp"
+            }
+        ]
+    },
+    {
+        "name": "knight_base",
+        "inherits": [
+            "castle_hero_base"
+        ],
+        "values": [
+            {
+                "name": "attack",
+                "value": 2
+            },
+            {
+                "name": "defense",
+                "value": 2
+            },
+            {
+                "name": "power",
+                "value": 1
+            },
+            {
+                "name": "knowledge",
+                "value": 1
+            },
+            {
+                "name": "attack_up_below_9",
+                "value": 0.35
+            },
+            {
+                "name": "attack_up_above",
+                "value": 0.30
+            },
+            {
+                "name": "defense_up_below_9",
+                "value": 0.45
+            },
+            {
+                "name": "defense_up_above",
+                "value": 0.30
+            },
+            {
+                "name": "power_up_below_9",
+                "value": 0.10
+            },
+            {
+                "name": "power_up_above",
+                "value": 0.20
+            },
+            {
+                "name": "knowledge_up_below_9",
+                "value": 0.10
+            },
+            {
+                "name": "knowledge_up_above",
+                "value": 0.20
+            },
+            {
+                "name": "learning_probability",
+                "values": {
+                    "archery": 0.05,
+                    "armorer": 0.05,
+                    "artillery": 0.05,
+                    "ballistics": 0.08,
+                    "first_aid": 0.02,
+                    "leadership": 0.10,
+                    "luck": 0.03,
+                    "offense": 0.07,
+                    "resistance": 0.05,
+                    "tactics": 0.07,
+                    "air_magic": 0.03,
+                    "earth_magic": 0.02,
+                    "fire_magic": 0.01,
+                    "water_magic": 0.04,
+                    "eagle_eye": 0.02,
+                    "intelligence": 0.01,
+                    "mysticism": 0.02,
+                    "necromancy": 0,
+                    "scholar": 0.01,
+                    "sorcery": 0.01,
+                    "wisdom": 0.03,
+                    "diplomacy": 0.04,
+                    "estates": 0.06,
+                    "learning": 0.04,
+                    "logistics": 0.05,
+                    "navigation": 0.08,
+                    "pathfinding": 0.04,
+                    "scouting": 0.04
+                }
+            }
+        ],
+        "tags": [
+            "knight",
+            "might_hero"
+        ]
+    }
+]

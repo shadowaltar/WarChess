@@ -32,18 +32,13 @@
             },
             {
                 "name": "change_stat",
-                "stat": "current_multi_attack_count",
-                "of": "self",
-                "by": -1
+                "value": "add(self.current_multi_attack_count,1)"
             }
         ],
         "on_finished": [
             {
                 "name": "change_stat",
-                "stat": "current_multi_attack_count",
-                "of": "self",
-                "set_to": "multi_attack_count",
-                "to_of": "self"
+                "value": "assign(self.values.current_multi_attack_count, self.values.multi_attack_count)"
             }
         ]
     }

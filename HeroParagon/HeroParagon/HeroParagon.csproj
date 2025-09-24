@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <Folder Include="Models\Modifiers\" />
+    <Folder Include="Models\Objects\" />
     <Folder Include="Resources\Images\Icons\Currencies\" />
     <Folder Include="Resources\Images\Icons\General\" />
     <Folder Include="Resources\Images\Sprites\Currencies\" />

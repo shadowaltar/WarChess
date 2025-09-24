@@ -1,0 +1,27 @@
+[
+    {
+        "name": "town_income",
+        "inherits": [
+            "change_stat"
+        ],
+        "condition": [
+            "start_of_week"
+        ],
+        "actions": [
+            {
+                "action": "add(self.owner.gold_income,50)"
+            }
+    },
+    {
+        "name": "defend"
+    },
+    {
+        "name": "move"
+    },
+    {
+        "name": "fly"
+    },
+    {
+        "name": "recruit"
+    }
+]
