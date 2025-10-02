@@ -1,0 +1,19 @@
+[
+    {
+        "name": "Adventuring",
+        "routine": "WorldAdventure",
+        "comment": "Showing the main view of world, for exploration, hero movement, town visits, random events, etc."
+    },
+    {
+        "name": "PlayerPerformingActions",
+        "routine": "WorldAdventure"
+    },
+    {
+        "name": "CheckingEndTurn",
+        "routine": "WorldAdventure"
+    },
+    {
+        "name": "ShowingNpcActionsAfterYourTurn",
+        "routine": "WorldAdventure"
+    }
+]

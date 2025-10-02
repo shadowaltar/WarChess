@@ -85,7 +85,7 @@ public static class FunctionExtensions
     }
 
 
-    public static NamedValue? ParseNamedValue(this ReadOnlySpan<char> expression)
+    public static Property? ParseNamedValue(this ReadOnlySpan<char> expression)
     {
         // must not be a list of values
         expression = expression.Trim();

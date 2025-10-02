@@ -1,0 +1,79 @@
+[
+    {
+        "name": "ApplicationLoading",
+        "routine": "TitleScreen"
+    },
+    {
+        "name": "ApplicationUpdating",
+        "routine": "TitleScreen"
+    },
+    {
+        "name": "ShowingServiceUpdateNotification",
+        "routine": "TitleScreen"
+    },
+    {
+        "name": "SelectingGameMode",
+        "routine": "TitleScreen",
+        "comment": "To select game mode in title screen, like Continue, New Game, Multiplayer, Load Game, Configs, Credits, etc."
+    },
+    {
+        "name": "SelectingNewGameVersion",
+        "routine": "TitleScreen",
+        "comment": "To select which version of game; part of New Game flow."
+    },
+    {
+        "name": "SelectingNewGameSettings",
+        "routine": "TitleScreen",
+        "comment": "To select new game settings, like difficulty, map size, player and NPC settings, etc.; part of New Game flow."
+    },
+    {
+        "name": "CreatingNewGame",
+        "routine": "TitleScreen",
+        "comment": "To create a new game with selected settings; part of New Game flow."
+    },
+    {
+        "name": "SelectingMapGeneratorSettings",
+        "routine": "TitleScreen",
+        "comment": "To select map generator settings, like land/water ratio, map style, seed, etc.; part of New Game flow."
+    },
+    {
+        "name": "SelectingSavedGameToLoad",
+        "routine": "TitleScreen",
+        "comment": "To select which save game slot to load; part of Load Game flow."
+    },
+    {
+        "name": "LoadingSavedGame",
+        "routine": "TitleScreen",
+        "comment": "To load the selected save game; part of Load Game flow."
+    },
+    {
+        "name": "ConfigMultiplayerSettings",
+        "routine": "TitleScreen",
+        "comment": "To configure multiplayer settings, like server address, port, player name, etc.; part of New Game or Load Game flow."
+    },
+    {
+        "name": "ShowingCampaignBriefing",
+        "routine": "TitleScreen",
+        "comment": "To show campaign briefing before starting a new campaign stage."
+    },
+    {
+        "name": "PlayingVideo",
+        "routine": "TitleScreen",
+        "comment": "To play intro or outro video."
+    },
+    {
+        "name": "ShowingCredits",
+        "routine": "TitleScreen",
+        "comment": "To show developer credits."
+    },
+    {
+        "name": "ShowingConfigs",
+        "routine": "TitleScreen",
+        "comment": "To show and modify game configurations."
+    },
+    {
+        "name": "ExitingToDesktop",
+        "routine": "TitleScreen",
+        "comment": "To exit the game application."
+    }
+]

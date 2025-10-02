@@ -1,45 +1,24 @@
 [
     {
-        "name": "castle_building_base",
+        "name": "village_hall",
         "inherits": [
             "building_base"
         ],
-        "tags": [
-            "castle",
-            "grass_native_terrain"
-        ]
-    },
-    {
-        "name": "castle_town",
-        "display_name": "Castle",
-        "inherits": [
-            "castle_building_base"
-        ],
-        "tags": [
-            "town",
-            "has_garrison"
-        ],
-        "abilities": [
+        "values": [
             {
-                "name": "allow_garrison"
-            },
-            {
-                "name": "initiate_creatures_castle"
+                "name": "cost",
+                "value": {
+                    "currency": "gold",
+                    "value": 0
+                }
             }
-        ]
-    },
-    {
-        "name": "fortress",
-        "inherits": [
-            "castle_building_base"
         ],
         "tags": [
-            "fortress",
-            "has_garrison"
+            "in_town"
         ],
         "abilities": [
             {
-                "name": "allow_garrison"
+                "name": ""
             }
         ]
     }

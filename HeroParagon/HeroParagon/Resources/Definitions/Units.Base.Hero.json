@@ -1,34 +1,5 @@
 [
     {
-        "name": "unit_base",
-        "values": [
-            {
-                "name": "morale",
-                "value": 0
-            },
-            {
-                "name": "luck",
-                "value": 0
-            }
-        ]
-    },
-    {
-        "name": "hero_base",
-        "values": [
-            {
-                "name": "cost",
-                "value": {
-                    "currency": "gold",
-                    "value": 2500
-                }
-            }
-        ],
-        "tags": [
-            "hero",
-            "non_unit"
-        ]
-    },
-    {
         "name": "castle_hero_base",
         "inherits": [
             "hero_base"

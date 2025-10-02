@@ -333,8 +333,7 @@
 			{
 				"name": "hate",
 				"args": [
-					"devil",
-					"demon"
+					"devil","demon"
 				]
 			},
 			{

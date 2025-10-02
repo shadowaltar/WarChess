@@ -5,7 +5,5 @@ public class ArgumentedAbility(Ability ability)
 {
     public Ability Ability { get; } = ability;
 
-    public Cooldown? Cooldown { get; set; }
-
-    public List<NamedValue>? Arguments { get; set; }
+    public List<Property>? Arguments { get; set; }
 }

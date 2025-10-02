@@ -8,8 +8,8 @@ public class ContainsFunction : IFunction
 
     public string Name => NameString;
     public bool IsValid { get; private set; }
-    public NamedValue Operand1 { get; private set; }
-    public NamedValue Operand2 { get; private set; }
+    public Property Operand1 { get; private set; }
+    public Property Operand2 { get; private set; }
 
     public void ParseDefinition(ReadOnlySpan<char> definition)
     {
