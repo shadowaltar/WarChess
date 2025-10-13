@@ -1,0 +1,14 @@
+[
+    {
+        "name": "showView"
+    },
+    {
+        "name": "hideView"
+    },
+    {
+        "name": "showOverlay"
+    },
+    {
+        "name": "hideOverlay"
+    }
+]

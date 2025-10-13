@@ -1,0 +1,47 @@
+[
+    {
+        "name": "ManagingTown",
+        "routine": "TownManagement",
+        "comment": "Showing the main view of town."
+    },
+    {
+        "name": "RecruitingUnits",
+        "routine": "TownManagement",
+        "comment": "When the player is recruiting units in one of the dwelling building."
+    },
+    {
+        "name": "ViewingAllBuildings",
+        "routine": "TownManagement",
+        "comment": "When the player is choosing a building to construct or to replace (like upgrade)."
+    },
+    {
+        "name": "ViewingAllUnits",
+        "routine": "TownManagement",
+        "comment": "When the player is checking all units available for recruit in the town."
+    },
+    {
+        "name": "RecruitingHero",
+        "routine": "TownManagement",
+        "comment": "When the user is checking hero recruitment dialog."
+    },
+    {
+        "name": "ViewingMagicGuild",
+        "routine": "TownManagement",
+        "comment": "When the user is checking magic guild dialog."
+    },
+    {
+        "name": "ViewingArtifactShop",
+        "routine": "TownManagement",
+        "comment": "When the user is checking artifact shop dialog."
+    },
+    {
+        "name": "ViewingExperienceShop",
+        "routine": "TownManagement",
+        "comment": "When the user is checking experience shop dialog (like artifact or unit sacrifaction dialog)."
+    },
+    {
+        "name": "ViewingThiefGuild",
+        "routine": "TownManagement",
+        "comment": "When current user is checking the thief guild dialog."
+    }
+]

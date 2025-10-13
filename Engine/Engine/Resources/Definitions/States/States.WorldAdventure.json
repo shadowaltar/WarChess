@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Adventuring",
+        "routine": "WorldAdventure",
+        "comment": "Showing the main view of world, for exploration, hero movement, town visits, random events, etc."
+    },
+    {
+        "name": "PlayerPerformingActions",
+        "routine": "WorldAdventure",
+        "comment": "NPC or other players over the network are performing actions, such as moving hero, visiting town, etc."
+    },
+    {
+        "name": "ShowingBirdViewWorldMap",
+        "routine": "WorldAdventure",
+        "comment": "Showing the zoomed out world map, usually invoked by view-world related abilities."
+    },
+    {
+        "name": "ShowingTreasureMap",
+        "routine": "WorldAdventure",
+        "comment": "Showing the treasure map, invoked by VisitRelicObelisk, or ViewTreasureMap ability."
+    },
+    {
+        "name": "CheckingEndTurn",
+        "routine": "WorldAdventure",
+        "comment": "State when the current player still have action points left: inform the user via popup."
+    },
+    {
+        "name": "VisitingTown",
+        "routine": "WorldAdventure",
+        "comment": "When a player is visiting a town. Will transit to TownManagement routine."
+    },
+    {
+        "name": "VisitingCreatureDwellings",
+        "routine": "WorldAdventure",
+        "comment": "When a player is visiting a creature building."
+    },
+    {
+        "name": "OccupyingMine",
+        "routine": "WorldAdventure",
+        "comment": "When a player is visiting a mine building without garrison and not owned by this player."
+    },
+    {
+        "name": "ViewingHeroInfo",
+        "routine": "WorldAdventure",
+        "comment": "When current user is checking hero info dialog."
+    },
+    {
+        "name": "ViewingSpellBook",
+        "routine": "WorldAdventure",
+        "comment": "When current user is checking spell book dialog."
+    },
+    {
+        "name": "ViewingQuestLog",
+        "routine": "WorldAdventure",
+        "comment": "When current user is checking quest log dialog."
+    },
+    {
+        "name": "ViewingDiplomacy",
+        "routine": "WorldAdventure",
+        "comment": "When current user is checking diplomacy dialog."
+    },
+    {
+        "name": "ViewingObjectives",
+        "routine": "WorldAdventure",
+        "comment": "When current user is checking objectives dialog."
+    },
+    {
+        "name": "ViewingScore",
+        "routine": "WorldAdventure",
+        "comment": "When current user is checking score dialog."
+    },
+    {
+        "name": "ViewingGarrison",
+        "routine": "WorldAdventure",
+        "comment": "When current user is checking building garrison dialog. Used by a mine already owned by   mkuijl.bjQ1`a hnmb "
+    },
+    {
+        "name": "ShowingSettings",
+        "routine": "WorldAdventure",
+        "comment": "When current user is viewing the settings dialog."
+    }
+]

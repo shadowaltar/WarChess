@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\Modifiers\**" />
+    <Compile Remove="Models\Objects\**" />
+    <Compile Remove="Resources\Maps\**" />
+    <Compile Remove="Resources\Units\**" />
+    <EmbeddedResource Remove="Models\Modifiers\**" />
+    <EmbeddedResource Remove="Models\Objects\**" />
+    <EmbeddedResource Remove="Resources\Maps\**" />
+    <EmbeddedResource Remove="Resources\Units\**" />
+    <None Remove="Models\Modifiers\**" />
+    <None Remove="Models\Objects\**" />
+    <None Remove="Resources\Maps\**" />
+    <None Remove="Resources\Units\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Logic\Jobs\Ai\" />
+    <Folder Include="Resources\Images\Icons\Currencies\" />
+    <Folder Include="Resources\Images\Icons\General\" />
+    <Folder Include="Resources\Images\Sprites\Currencies\" />
+    <Folder Include="Resources\Images\" />
+    <Folder Include="Services\" />
+    <Folder Include="Stories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Disruptor" Version="6.0.1" />
+    <PackageReference Include="SkiaSharp" Version="3.119.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+	  <EmbeddedResource Include="**\*.json" />
+	  <EmbeddedResource Include="**\*.txt" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,204 @@
+[
+    {
+        "name": "BaseDialog",
+        "single": "true",
+        "fullScreen": "false",
+        "centered": "true",
+        "modal": "true",
+        "button": "OK"
+    },
+    {
+        "name": "TwoChoicesDialog",
+        "inherits": "BaseDialog"
+    },
+    {
+        "name": "ThreeChoicesDialog",
+        "inherits": "BaseDialog"
+    },
+    {
+        "name": "BaseFullScreen",
+        "single": "true",
+        "fullScreen": "true"
+    },
+    {
+        "name": "WorldView",
+        "inherits": "BaseFullScreen"
+    },
+    {
+        "name": "TownView",
+        "inherits": "BaseFullScreen"
+    },
+    {
+        "name": "TitleScreen",
+        "inherits": "BaseFullScreen"
+    },
+    {
+        "name": "TextPopup",
+        "inherits": "BaseDialog"
+    },
+    {
+        "name": "AcquireEntityView",
+        "inherits": "BaseDialog",
+        "comments": "Showed when a hero acquires one or more units, resources, magic, experience, skill points or artifacts."
+    },
+    {
+        "name": "ConditionalAcquireEntityView",
+        "inherits": "BaseDialog",
+        "comments": "Showed when a hero can acquire one or more units, resources, magic, experience, skill points or artifacts, with certain prices, in world adventure map."
+    },
+    {
+        "name": "HeroDetailsView",
+        "inherits": "BaseDialog",
+        "comments": "Showed a hero's details (units, artifacts, skill points etc) when it is selected in the world adventure view."
+    },
+    {
+        "name": "WorldMapObjectGarrisonView",
+        "inherits": "BaseDialog",
+        "comments": "Showed when a hero visits an owned mine or a border gate."
+    },
+    {
+        "name": "BorderGateOrBorderGuardView",
+        "inherits": "BaseDialog",
+        "comments": "Showed when a hero visits a border gate / border guard in world adventure map. Note: if you have the colored key, colored border gate will not show this dialog."
+    },
+    {
+        "name": "BorderGateOrBorderGuardCanPassView",
+        "inherits": "BaseDialog",
+        "comments": "Showed when a hero visits a border gate / border guard in world adventure map. Note: only applicable for non-colored border gate, or any boarder guard. This dialog will only show once for this particular building when visited with key obtained or quest finished."
+    },
+    {
+        "name": "DiplomacyView",
+        "inherits": "BaseDialog",
+        "comments": "Showed when a map unit wishes to join your current hero (optionally with a price) or retrieve, after a hero proactively encounters a unit in world adventure map."
+    },
+    {
+        "name": "UnitAbandonView",
+        "inherits": "BaseDialog",
+        "comments": "Showed when a hero needs to abandon one or more units after any unit acquisition event happens while the hero has no empty unit slot."
+    },
+    {
+        "name": "UnitUpgradeView",
+        "inherits": "BaseDialog",
+        "comments": "Showed when a hero visits the Hill Fort building in world adventure map."
+    },
+    {
+        "name": "TownPortalSelectionView",
+        "inherits": "BaseDialog",
+        "comments": "Showed when a hero invokes TownPortal skill in world adventure map."
+    },
+    {
+        "name": "MagicGuildView",
+        "inherits": "BaseFullScreen",
+        "comments": "Showed when the magic guild building is clicked in town view."
+    },
+    {
+        "name": "BuyMagicBookView",
+        "inherits": "BaseDialog",
+        "comments": "Showed when the player clicks the magic guild building in town view, but the hero has no magic book."
+    },
+    {
+        "name": "MagicBookView",
+        "inherits": "BaseFullScreen",
+        "comments": "Showed when a hero opens the magic book in world adventure map or in town view."
+    },
+    {
+        "name": "MagicDetailsView",
+        "inherits": "BaseDialog",
+        "comments": "Showed when a hero views the details of a magic, when magic book view is active."
+    },
+    {
+        "name": "UnitDetailsView",
+        "inherits": "BaseDialog",
+        "comments": "Showed when recruiting a unit, or when viewing a unit which is in hero's unit slot or in garrison, in town management or world adventure view."
+    },
+    {
+        "name": "HeroExchangeView",
+        "inherits": "BaseDialog",
+        "comments": "Showed when a hero visits another allied hero in world adventure map."
+    },
+    {
+        "name": "EntitySacrificeView",
+        "inherits": "BaseDialog",
+        "comments": "Showed when a hero visits the sacrifice altar in world adventure map."
+    },
+    {
+        "name": "MarketPlaceView",
+        "inherits": "BaseDialog",
+        "comments": "Showed when a hero visits the trading port in world adventure map."
+    },
+    {
+        "name": "FactionComparisonView",
+        "inherits": "BaseDialog",
+        "comments": "Showed when a hero visits the Den of Thieves building in world adventure map."
+    },
+    {
+        "name": "PuzzleMapView",
+        "inherits": "BaseFullScreen",
+        "comments": "Showed when a hero visits the obelisk building, or invokes ViewPuzzle button in in world adventure map."
+    },
+    {
+        "name": "SeerHutQuestView",
+        "inherits": "BaseDialog",
+        "comments": "Showed when a hero visits a seer hut building in world adventure map for the first time that the quest wasn't discovered yet."
+    },
+    {
+        "name": "SeerHutQuestResponseView",
+        "inherits": "BaseDialog",
+        "comments": "Showed when a hero visits a seer hut building in world adventure map after the quest target was achieved and the dialog allows player to choose a reward."
+    },
+    {
+        "name": "ArtifactBlackMarketView",
+        "inherits": "BaseDialog",
+        "comments": "Showed when a hero visits the artifact black market building in world adventure map."
+    },
+    {
+        "name": "VisitingGuardedMineView",
+        "inherits": "BaseDialog",
+        "comments": "Showed when a hero visits a guarded mine/lighthouse in world adventure map."
+    },
+    {
+        "name": "TreasureChestView",
+        "inherits": "TwoChoicesDialog",
+        "comments": "Showed when a hero visits a treasure chest."
+    },
+    {
+        "name": "ArenaView",
+        "inherits": "TwoChoicesDialog",
+        "comments": "Showed when a hero visits the Arena building in world adventure map."
+    },
+    {
+        "name": "SchoolOfWarView",
+        "inherits": "TwoChoicesDialog",
+        "comments": "Showed when a hero visits the School of War building in world adventure map."
+    },
+    {
+        "name": "CartographerView",
+        "inherits": "BaseDialog",
+        "comments": "Showed when a hero visits the cartographer building in world adventure map."
+    },
+    {
+        "name": "UnitSellingView",
+        "inherits": "BaseDialog",
+        "comments": "Showed when a hero visits the Freelancer's Guild building in world adventure map."
+    },
+    {
+        "name": "ShipyardView",
+        "inherits": "BaseDialog",
+        "comments": "Showed when a hero visits the shipyard building in world adventure map; or when flagged, the dialog is opened by clicking."
+    },
+    {
+        "name": "TavernView",
+        "inherits": "BaseDialog",
+        "comments": "Showed when a hero visits the Tavern building in world adventure map."
+    },
+    {
+        "name": "TreeOfWisdomView",
+        "inherits": "ThreeChoicesDialog",
+        "comments": "Showed when a hero visits the Tree of Wisdom building in world adventure map."
+    },
+    {
+        "name": "WarMachineFactoryView",
+        "inherits": "BaseDialog",
+        "comments": "Showed when a hero visits the War Machine Factory building in world adventure map."
+    }
+]

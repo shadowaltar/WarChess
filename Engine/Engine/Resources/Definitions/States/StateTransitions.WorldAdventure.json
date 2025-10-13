@@ -1,0 +1,32 @@
+[
+    {
+        "from": "WorldAdventure.Adventuring",
+        "to": "TownManagement.ManagingTown",
+        "trigger": {
+            "type": "guiAction",
+            "conditions": [
+                "contains(selection.labels,town)",
+                "contains(selection.labels,allied)",
+                "selection.isSelectable==true"
+            ]
+        },
+        "actions": [
+            "hideView(WorldView)",
+            "showView(TownView, selection.entity.id)"
+        ]
+    },
+    {
+        "from": "TownManagement.ManagingTown",
+        "to": "WorldAdventure.Adventuring",
+        "trigger": {
+            "type": "guiAction",
+            "conditions": [
+                "selection.label==exit_button"
+            ]
+        },
+        "actions": [
+            "hideView(townView)",
+            "showView(worldView)"
+        ]
+    }
+]
