@@ -1,6 +1,7 @@
 
 using System.Drawing;
 
+using Engine.Models.Abstracts;
 using Engine.Resources;
 
 using SkiaSharp;
@@ -13,13 +14,14 @@ public partial class MainForm : Form
     {
         InitializeComponent();
         var rr = new ResourceReader();
-        rr.ImageBytes
-        using var s = new SKManagedStream()
-        SKImage.FromPicture(SKPicture.Deserialize())
-        Draw(ResourceReader.ImageBytes.FirstOrDefault().Value);
+        foreach (var (key, imageBytes) in rr.ImageBytes)
+        {
+            Draw(imageBytes, null, null);
+            break;
+        }
     }
 
-    internal void Draw(byte[] value)
+    internal void Draw(byte[] value, Coordinate2D topLeft, Coordinate2D bottomRight)
     {
         bitmap = SKBitmap.Decode(value);
         skglControl1.Refresh();

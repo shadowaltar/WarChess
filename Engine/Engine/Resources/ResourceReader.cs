@@ -12,6 +12,7 @@ public class ResourceReader
     private readonly Dictionary<string, byte[]> configFilePathAndContents;
 
     public Dictionary<string, byte[]> ImageBytes { get; }
+    public Dictionary<string, byte[]> SpriteSheetInfo { get; }
 
     static ResourceReader()
     {
@@ -52,7 +53,6 @@ public class ResourceReader
     {
         configFilePathAndContents = ReadFiles([".json", ".txt", ".xml", ".csv", ".yml", ".yaml"]);
         ImageBytes = ReadFiles([".gif", ".jpeg", ".jpg", ".png", ".webp"]);
-        StateTransitionFiles = configFilePathAndContents.Where(p => p.Key.Contains("StateTransitions.")).ToDictionary(p => p.Key, p => Encoding.UTF8.GetString(p.Value));
     }
 
     public Dictionary<string, string> GetFilesAsText(string fileKeyContainText)

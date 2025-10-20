@@ -1,7 +1,7 @@
 ﻿namespace Engine.Visuals.Sprites;
 public class AnimationClip
 {
-    public SpriteState State { get; set; }
+    public string State { get; set; }
 
     public int Width { get; set; }
 
@@ -18,4 +18,16 @@ public class AnimationClip
     public int StartingFrameIndex { get; set; } = 0;
 
     public bool IsLooping { get; set; } = true;
+}
+
+public class AnimationDefinition
+{
+    public string EntityName { get; set; }
+    public string ImagePath { get; set; }
+    public string DefaultState { get; set; }
+    public bool AllowInterruption { get; set; } = true;
+
+    public string[] States { get; set; }
+
+    public Sprite[] Sprites { get; set; }
 }

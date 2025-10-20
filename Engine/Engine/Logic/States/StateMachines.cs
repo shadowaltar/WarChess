@@ -26,7 +26,7 @@ public class StateMachines
             }
         }
 
-        fileContents = ResourceReader.StateTransitionFiles;
+        fileContents = rm.GetTextFiles("Transitions");
         foreach (var content in fileContents.Values)
         {
             var trans = JsonSerializer.Deserialize<List<StateTransition>>(content, options);

@@ -1,6 +1,7 @@
 ﻿using Engine.Logic.Jobs;
 using Engine.Logic.States;
 using Engine.Models.Supportive;
+using Engine.Resources;
 using Engine.Visuals;
 
 namespace Engine.Logic;
@@ -12,11 +13,13 @@ public class MainLoop
     private StateMachines stateMachines;
     private StateMachine mainStateMachine;
     private readonly JobManager jobManager;
+    private readonly ResourceManager resourceManager;
     private readonly Ui ui;
 
     public MainLoop()
     {
         jobManager = new JobManager();
+        resourceManager = new ResourceManager();
         ui = new Ui();
     }
 
@@ -60,7 +63,7 @@ public class MainLoop
     private void Initialize()
     {
         stateMachines = new StateMachines();
-        stateMachines.Initialize();
+        stateMachines.Initialize(resourceManager);
         mainStateMachine = stateMachines.Machines["TitleScreen"];
         serviceState = ServiceState.Running;
         previousTimestamp = DateTime.UtcNow;
