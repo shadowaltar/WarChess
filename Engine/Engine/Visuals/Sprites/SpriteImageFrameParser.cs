@@ -9,9 +9,15 @@ public class SpriteImageFrameParser
 {
     public static void Parse(string path)
     {
+        var bytes = File.ReadAllBytes(path);
+        Parse(bytes);
+        Console.WriteLine($"Parsed sprite image frames from: {path}");
+    }
+
+    public static void Parse(byte[] bytes)
+    {
         try
         {
-            var bytes = System.IO.File.ReadAllBytes(path);
             var skBitmap = SKBitmap.Decode(bytes);
             var width = skBitmap.Width;
             var height = skBitmap.Height;
@@ -23,11 +29,11 @@ public class SpriteImageFrameParser
                 frame.AnchorPoint = new Coordinate2D { X = frame.Width / 2, Y = frame.Height };
                 Console.WriteLine(frame + ",");
             }
-            Console.WriteLine($"Parsed sprite image frames from {path}: {width}x{height}, total pixels: {width * height}, frame count: {frames.Count}");
+            Console.WriteLine($"Parsed sprite image frames: {width}x{height}, total pixels: {width * height}, frame count: {frames.Count}");
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Error parsing sprite image frames from {path}: {ex.Message}");
+            Console.WriteLine($"Error parsing sprite image frames: {ex.Message}");
         }
     }
 

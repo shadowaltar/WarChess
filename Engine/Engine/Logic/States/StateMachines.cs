@@ -10,7 +10,7 @@ public class StateMachines
     public void Initialize(ResourceManager rm)
     {
         var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-        var fileContents = rm.GetTextFiles("States");
+        var fileContents = rm.Configs[DefinitionResourceType.States];
 
         foreach (var content in fileContents.Values)
         {
@@ -26,7 +26,7 @@ public class StateMachines
             }
         }
 
-        fileContents = rm.GetTextFiles("Transitions");
+        fileContents = rm.Configs[DefinitionResourceType.StateTransitions];
         foreach (var content in fileContents.Values)
         {
             var trans = JsonSerializer.Deserialize<List<StateTransition>>(content, options);

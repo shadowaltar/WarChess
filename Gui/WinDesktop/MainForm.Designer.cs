@@ -35,31 +35,64 @@ partial class MainForm
     /// </summary>
     private void InitializeComponent()
     {
-        skglControl1 = new SkiaSharp.Views.Desktop.SKGLControl();
+        skglControl1 = new SKGLControl();
+        btnTest = new Button();
+        cbbSpriteImagePaths = new ComboBox();
+        cbbSpriteStates = new ComboBox();
         SuspendLayout();
         // 
         // skglControl1
         // 
-        skglControl1.Dock = DockStyle.Fill;
+        skglControl1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
         skglControl1.API = OpenTK.Windowing.Common.ContextAPI.OpenGL;
         skglControl1.APIVersion = new Version(3, 3, 0, 0);
         skglControl1.Flags = OpenTK.Windowing.Common.ContextFlags.Default;
         skglControl1.IsEventDriven = true;
-        skglControl1.Location = new Point(217, 113);
+        skglControl1.Location = new Point(12, 41);
         skglControl1.Name = "skglControl1";
         skglControl1.Profile = OpenTK.Windowing.Common.ContextProfile.Core;
         skglControl1.SharedContext = null;
-        skglControl1.Size = new Size(358, 219);
+        skglControl1.Size = new Size(776, 397);
         skglControl1.TabIndex = 0;
         skglControl1.PaintSurface += SkglControl1_PaintSurface;
         // 
-        // Form1
+        // btnTest
+        // 
+        btnTest.Location = new Point(713, 10);
+        btnTest.Name = "btnTest";
+        btnTest.Size = new Size(75, 23);
+        btnTest.TabIndex = 1;
+        btnTest.Text = "Test";
+        btnTest.UseVisualStyleBackColor = true;
+        btnTest.Click += btnTest_Click;
+        // 
+        // cbbSpriteImagePaths
+        // 
+        cbbSpriteImagePaths.FormattingEnabled = true;
+        cbbSpriteImagePaths.Location = new Point(12, 10);
+        cbbSpriteImagePaths.Name = "cbbSpriteImagePaths";
+        cbbSpriteImagePaths.Size = new Size(438, 25);
+        cbbSpriteImagePaths.TabIndex = 2;
+        // 
+        // cbbSpriteStates
+        // 
+        cbbSpriteStates.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+        cbbSpriteStates.FormattingEnabled = true;
+        cbbSpriteStates.Location = new Point(456, 10);
+        cbbSpriteStates.Name = "cbbSpriteStates";
+        cbbSpriteStates.Size = new Size(251, 25);
+        cbbSpriteStates.TabIndex = 3;
+        // 
+        // MainForm
         // 
         AutoScaleDimensions = new SizeF(7F, 17F);
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(800, 450);
+        Controls.Add(cbbSpriteStates);
+        Controls.Add(cbbSpriteImagePaths);
+        Controls.Add(btnTest);
         Controls.Add(skglControl1);
-        Name = "Form1";
+        Name = "MainForm";
         Text = "Form1";
         ResumeLayout(false);
     }
@@ -82,4 +115,7 @@ partial class MainForm
     #endregion
 
     private SkiaSharp.Views.Desktop.SKGLControl skglControl1;
+    private Button btnTest;
+    private ComboBox cbbSpriteImagePaths;
+    private ComboBox cbbSpriteStates;
 }

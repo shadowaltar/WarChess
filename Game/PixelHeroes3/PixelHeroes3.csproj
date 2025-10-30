@@ -22,6 +22,12 @@
 
 
 	<ItemGroup>
-	  <EmbeddedResource Include="Resources\Definitions\AnimationClip.Archangel.json" />
+	  <EmbeddedResource Include="Resources\Definitions\Animation.Archangel.json" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+	  <Folder Include="Resources\Images\Icons\" />
+	  <Folder Include="Resources\Images\StaticImages\" />
 	</ItemGroup>
 </Project>

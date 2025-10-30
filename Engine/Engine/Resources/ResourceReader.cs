@@ -1,18 +1,30 @@
 ﻿using System.Reflection;
 using System.Text;
 
+using Engine.Logic.Logging;
 using Engine.Utils;
 
 namespace Engine.Resources;
 public class ResourceReader
 {
+    private const string DefaultDefinitionKey = "*";
+    private const string DefinitionKeyword = "Definitions";
+    private const string DefinitionBuiltInKeyword = "BuiltIn";
+    private const string DefinitionBaseKeyword = "Base";
+    private const string ImageKeyword = "Images";
+    private const string SpriteAllStatesKeyword = "AllStates";
+    private const string SpriteFramedKeyword = "Framed";
+
     private static readonly List<(string, Assembly)> resourceToAssemblies = [];
-    private static readonly string resourcesDir;
 
-    private readonly Dictionary<string, byte[]> configFilePathAndContents;
+    private string resourcesDir;
 
+    public Dictionary<DefinitionResourceType, Dictionary<string, string>> Configs { get; } = [];
+    public Dictionary<BinaryResourceType, Dictionary<string, byte[]>> Images { get; } = [];
+    public Dictionary<BinaryResourceType, Dictionary<string, byte[]>> Videos { get; } = [];
+    public Dictionary<BinaryResourceType, Dictionary<string, byte[]>> Audios { get; } = [];
+    public HashSet<string> ImagePaths => [.. ImageBytes.Keys];
     public Dictionary<string, byte[]> ImageBytes { get; }
-    public Dictionary<string, byte[]> SpriteSheetInfo { get; }
 
     static ResourceReader()
     {
@@ -25,6 +37,10 @@ public class ResourceReader
                 resourceToAssemblies.Add((name, asm));
             }
         }
+    }
+
+    public void Read()
+    {
         var baseDir = AppContext.BaseDirectory;
         // Prefer baseDir/Resources first
         var candidate = Path.Combine(baseDir, "Resources");
@@ -51,16 +67,55 @@ public class ResourceReader
 
     public ResourceReader()
     {
-        configFilePathAndContents = ReadFiles([".json", ".txt", ".xml", ".csv", ".yml", ".yaml"]);
-        ImageBytes = ReadFiles([".gif", ".jpeg", ".jpg", ".png", ".webp"]);
+        const string jsonSuffix = "json";
+        const string pngSuffix = "png";
+        Configs.Clear();
+        var configFilePathAndContents = ReadFiles(["." + jsonSuffix]);
+        foreach (var (path, content) in configFilePathAndContents)
+        {
+            var parts = path.Split('/', '\\');
+            if (!parts.ContainsIgnoreCase(DefinitionKeyword))
+                continue;
+
+            // definitions are all jsons
+            if (!Enum.TryParse<DefinitionResourceType>(parts[2], out var type)
+                && !Enum.TryParse(parts[1], out type))
+            {
+                Log.Error("Failed to parse to definition type, path is: " + path);
+                continue;
+            }
+            var configs = Configs.GetOrCreate(type);
+            var key = path[(DefinitionKeyword.Length + 1)..^(jsonSuffix.Length + 1)];
+            key = key[(type.ToString().Length)..].Trim('/', '\\');
+            key = string.IsNullOrEmpty(key) ? DefaultDefinitionKey : key;
+            configs[key] = Encoding.UTF8.GetString(content);
+        }
+
+        var imageBytes = ReadFiles(["." + pngSuffix]);
+        foreach (var (path, bytes) in imageBytes)
+        {
+            var parts = path.Split('/', '\\');
+            if (!parts.ContainsIgnoreCase(ImageKeyword))
+                continue;
+
+            if (!Enum.TryParse<BinaryResourceType>(parts[2], out var type)
+                && !Enum.TryParse(parts[1], out type))
+            {
+                Log.Error("Failed to parse to definition type, path is: " + path);
+                continue;
+            }
+            var key = path[(ImageKeyword.Length + 1)..^(pngSuffix.Length + 1)];
+            parts = key.Split('/', '\\').Where(p => p != type.ToString()).ToArray();
+            var images = Images.GetOrCreate(type);
+        }
     }
 
-    public Dictionary<string, string> GetFilesAsText(string fileKeyContainText)
-    {
-        return configFilePathAndContents.Where(p => p.Key.Contains(fileKeyContainText)).ToDictionary(p => p.Key, p => Encoding.UTF8.GetString(p.Value));
-    }
+    //public Dictionary<string, string> GetFilesAsText(string fileKeyContainText)
+    //{
+    //    return configFilePathAndContents.Where(p => p.Key.Contains(fileKeyContainText)).ToDictionary(p => p.Key, p => Encoding.UTF8.GetString(p.Value));
+    //}
 
-    private static Dictionary<string, byte[]> ReadFiles(string[] allowedExts)
+    private Dictionary<string, byte[]> ReadFiles(string[] allowedExts)
     {
         var result = new Dictionary<string, byte[]>(StringComparer.OrdinalIgnoreCase);
 
@@ -69,8 +124,9 @@ public class ResourceReader
         {
             try
             {
-                var files = Directory.EnumerateFiles(resourcesDir, "*.*", SearchOption.AllDirectories)
-                                     .Where(f => allowedExts.Contains(Path.GetExtension(f), StringComparer.OrdinalIgnoreCase));
+                var files = Directory
+                    .EnumerateFiles(resourcesDir, "*.*", SearchOption.AllDirectories)
+                    .Where(f => allowedExts.Contains(Path.GetExtension(f), StringComparer.OrdinalIgnoreCase));
 
                 foreach (var file in files)
                 {

@@ -11,14 +11,17 @@
   <ItemGroup>
     <Compile Remove="Models\Modifiers\**" />
     <Compile Remove="Models\Objects\**" />
+    <Compile Remove="Resources\Images\Sprites\**" />
     <Compile Remove="Resources\Maps\**" />
     <Compile Remove="Resources\Units\**" />
     <EmbeddedResource Remove="Models\Modifiers\**" />
     <EmbeddedResource Remove="Models\Objects\**" />
+    <EmbeddedResource Remove="Resources\Images\Sprites\**" />
     <EmbeddedResource Remove="Resources\Maps\**" />
     <EmbeddedResource Remove="Resources\Units\**" />
     <None Remove="Models\Modifiers\**" />
     <None Remove="Models\Objects\**" />
+    <None Remove="Resources\Images\Sprites\**" />
     <None Remove="Resources\Maps\**" />
     <None Remove="Resources\Units\**" />
   </ItemGroup>
@@ -27,7 +30,6 @@
     <Folder Include="Logic\Jobs\Ai\" />
     <Folder Include="Resources\Images\Icons\Currencies\" />
     <Folder Include="Resources\Images\Icons\General\" />
-    <Folder Include="Resources\Images\Sprites\Currencies\" />
     <Folder Include="Resources\Images\" />
     <Folder Include="Services\" />
     <Folder Include="Stories\" />
